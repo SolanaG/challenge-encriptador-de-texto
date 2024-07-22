@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --gradient-start: #f0f4f8;
+  --gradient-end: #d0dfe7;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --primary-color: #0a3871;
+  --secondary-color: #ffffff;
+  --third-color: #e5e5e5;
+  --validation-color: gray;
+  --title-color: #ff6347;
+  --title-shadow: rgba(0, 0, 0, 0.1);
+  --encrypt-hover-color: #084a7e;
+  --encrypt-active-color: #052a5a;
+  --footer-color: #004d99;
+  --font-primary: "Roboto", sans-serif;
+  --font-secondary: "Lora", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+  font-family: var(--font-primary);
+}
+
+nav {
+  padding: 1rem;
+  text-align: end;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  display: inline-block;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  margin: 3% 0 5% 0;
+  height: max-content;
+}
+
+.principal-div {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.title {
+  color: var(--title-color);
+  font-size: 1.5rem;
+  font-family: var(--font-secondary);
+  text-shadow: 1px 1px 2px var(--title-shadow);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+#text {
+  border: 0;
+  color: var(--primary-color);
+  background-color: transparent;
+  font-family: var(--font-primary);
+  padding: 12px;
+  font-size: 1.1rem;
+}
+#text:focus {
+  outline: none;
+}
+#text::placeholder {
+  /* Firefox */
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  opacity: 1;
+  font-size: 1.1rem;
+}
+#text::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: var(--primary-color);
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+}
+
+#validation-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#validation {
+  color: var(--validation-color);
+  font-family: var(--font-primary);
+  font-size: 0.85rem;
+}
+.i-important {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.div-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+}
+
+button {
+  width: 30%;
+  text-align: center;
+  border-radius: 16px;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px;
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.encrypt-button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.new-text {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-color);
+  border-radius: 30px;
+  padding: 30px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  min-height: 400px;
+  min-width: 300px;
+}
+
+.copy-button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 0;
+  width: 50%;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px var(--shadow-color);
+  background-color: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-end)
+  );
+}
+
+.encrypt-button:hover {
+  background-color: var(--encrypt-hover-color);
+  border: var(--encrypt-hover-color);
+}
+
+.copy-button:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--footer-color);
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: auto;
+  border-top: 1px solid #e5e5e5;
+  font-family: var(--font-secondary);
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    margin: 5%;
+    gap: 40px;
+  }
+  .principal-div {
+    width: 100%;
+    gap: 30px;
+  }
+  #boyImage {
+    width: 200px;
+  }
+  .new-text {
+    min-width: 250px;
+    min-height: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    gap: 10px;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .principal-div {
+    align-items: center;
+  }
+  .div-buttons {
+    flex-direction: column;
+  }
+  button {
+    width: auto;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav><img class="logo" src="assets/logo.png" alt="Logo Alura" /></nav>
+    <div class="container">
+      <div class="principal-div">
+        <h4 class="title">ENCRIPTADOR DE TEXTO</h4>
+        <p>
+          <input type="text" id="text" placeholder="Ingresa tu texto aquí" />
+        </p>
+        <div id="validation-div">
+          <img
+            src="./assets/i-icon.png"
+            alt="Important Icon"
+            class="i-important"
+          />
+          <p id="validation"></p>
+        </div>
+        <div class="div-buttons">
+          <button class="encrypt-button" onclick="handleEncrypt(event)">
+            Cifrar!
+          </button>
+          <button onclick="handleDecrypt(event)">Descifrar!</button>
+        </div>
+      </div>
+      <aside class="new-text">
+        <img id="boyImage" src="assets/boy.png" alt="Searching Boy" />
+        <p id="newText"></p>
+        <button class="copy-button" onclick="handleCopy(event)">Copiar</button>
+      </aside>
+    </div>
+    <footer class="footer">Desarrollado por Solana Gómez 🧡 2024</footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
