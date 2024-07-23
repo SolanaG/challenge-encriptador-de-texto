@@ -7,6 +7,8 @@ document.getElementById("validation-div").style.display = "none";
 
 textInput.addEventListener("focus", (event) => {
   document.getElementById("boyImage").style.display = "block";
+  document.getElementById("newText").innerText = "";
+
   document.getElementById("validation-div").style.display = "flex";
   document.getElementById("validation").textContent =
     "Solo letras minúsculas y sin acentos";
