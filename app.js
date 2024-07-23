@@ -55,6 +55,7 @@ function handleEncrypt() {
   document.getElementById("newText").innerText = encryptedText;
   document.getElementById("boyImage").style.display = "none";
   textInput.value = "";
+  document.getElementById("validation-div").style.display = "none";
 }
 
 function handleDecrypt() {
@@ -69,6 +70,7 @@ function handleDecrypt() {
   document.getElementById("newText").innerText = decryptedText;
   document.getElementById("boyImage").style.display = "none";
   textInput.value = "";
+  document.getElementById("validation-div").style.display = "none";
 }
 
 function handleCopy() {

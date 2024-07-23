@@ -49,6 +49,7 @@ nav {
 .container {
   flex: 1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin: 3% 0 5% 0;
   height: max-content;
@@ -78,6 +79,11 @@ nav {
   font-family: var(--font-primary);
   padding: 12px;
   font-size: 1.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 #text:focus {
   outline: none;
@@ -150,6 +156,15 @@ button {
   box-shadow: 0 4px 8px var(--shadow-color);
   min-height: 400px;
   min-width: 300px;
+  max-width: 40%;
+}
+
+#newText {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  max-width: 60%;
 }
 
 .copy-button {
@@ -223,9 +238,10 @@ button:hover {
   }
   .div-buttons {
     flex-direction: column;
+    width: 100%;
   }
   button {
-    width: auto;
+    width: 100%;
     font-size: 0.9rem;
   }
 }
